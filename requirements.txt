@@ -7,7 +7,7 @@ scikit-learn
 dill
 flask
 mlflow
-python-box
+python-box # To handle exceptions
 pyYAML
 tqdm
 ensure
