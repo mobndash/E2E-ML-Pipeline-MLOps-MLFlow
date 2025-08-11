@@ -1,6 +1,7 @@
 import os
+import sys
 from src.ML_MLOps_MLFlow_Pipeline import logger
-from src.ML_MLOps_MLFlow_Pipeline.exception import CustomException
+# from src.ML_MLOps_MLFlow_Pipeline.exception import CustomException
 import yaml
 from box.exceptions import BoxValueError
 import json
@@ -24,7 +25,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     except BoxValueError:
         raise ValueError("yaml file is empty")
     except Exception as e:
-        raise CustomException(e, sys)
+        raise e
 
 
 @ensure_annotations
