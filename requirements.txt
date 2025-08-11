@@ -7,3 +7,11 @@ scikit-learn
 dill
 flask
 mlflow
+python-box
+pyYAML
+tqdm
+ensure
+joblib
+types-pyYAML
+fastAPI
+-e .

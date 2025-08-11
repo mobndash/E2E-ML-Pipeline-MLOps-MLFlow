@@ -3,6 +3,7 @@ from typing import List
 
 
 HYPEN_E_DOT = "-e ."
+__version__ = "0.0.1"
 
 # Read the long description from README.md if available
 with open("README.md", "r", encoding="utf-8") as f:
@@ -12,14 +13,8 @@ with open("README.md", "r", encoding="utf-8") as f:
 def get_requirements(file_path: str) -> List[str]:
     """
     Reads a requirements.txt file and returns a list of dependencies.
-
-    Args:
-        file_path (str): Path to the requirements file.
-
-    Returns:
-        List[str]: A list of dependency strings.
     """
-    get_requirements = []
+    requirements_list = []
     with open(file_path) as file_obj:
         requirements = file_obj.readlines()
         requirements = [req.replace("\n", "") for req in requirements]
@@ -27,13 +22,15 @@ def get_requirements(file_path: str) -> List[str]:
         if HYPEN_E_DOT in requirements:
             requirements.remove(HYPEN_E_DOT)
 
+        requirements_list.extend(requirements)
+
     return requirements
 
 
 # Define the setup configuration
 setup(
     name="ML_MLOps_MLFlow_Pipeline",
-    version="0.0.1",  # Initial release version (Semantic Versioning)
+    version=__version__,  # Initial release version (Semantic Versioning)
     author="Swapnil Khot",  # Your name or organization
     author_email="Swapnil2Khot@gmail.com",  # Your contact email
     description="ML Pipeline Framework with MLFlow",  # A one-line description
