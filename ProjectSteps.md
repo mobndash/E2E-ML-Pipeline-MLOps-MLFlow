@@ -25,3 +25,11 @@
 6) Update constants -> __init__.py with the CONFIG_FILE_PATH, PARAMS and SCHEMA and import them to data ingestion
 
 7) Perform data ingestion in research -> data_ingestion.ipynb
+
+8) Udate data_ingestion.py and stage_data_ingestion.py
+
+9) Enter config for data_validateion in config.yaml file
+
+10) Update the schema.yaml according to dtypes of the data
+
+11) 
