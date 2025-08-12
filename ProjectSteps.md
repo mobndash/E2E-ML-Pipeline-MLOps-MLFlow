@@ -32,4 +32,11 @@
 
 10) Update the schema.yaml according to dtypes of the data
 
-11) 
+11) Update everything as per he workflow in step 5
+
+12) Perform data transformaition in research -> data_transformation.ipynb
+
+13) Enter config for data_transformation in config.yaml file
+
+14) Update everything as per he workflow in step 5 i.e config_entity, configuration.py, data_transformation.py under components, stage_data_transformation.py under pipeline, 
+                main.py

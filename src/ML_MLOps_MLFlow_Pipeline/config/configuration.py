@@ -3,6 +3,7 @@ from src.ML_MLOps_MLFlow_Pipeline.constants import *
 from src.ML_MLOps_MLFlow_Pipeline.utils.common import read_yaml, create_directories
 from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import DataIngestionConfig
 from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import DataValidationConfig
+from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import DataTransformationConfig
 
 
 class ConfigurationManager:
@@ -46,3 +47,15 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path
+        )
+
+        return data_transformation_config
