@@ -18,11 +18,11 @@ class DataValiadtion:
             for col in all_cols:
                 if col not in all_schema:
                     validation_status = False
-                    with open(self.config.STATUS_FILE, 'w') as f:
+                    with open(self.config.STATUS_FILE, "w") as f:
                         f.write(f"Validation status: {validation_status}\n")
                 else:
                     validation_status = True
-                    with open(self.config.STATUS_FILE, 'w') as f:
+                    with open(self.config.STATUS_FILE, "w") as f:
                         f.write(f"Validation status: {validation_status}\n")
 
             return validation_status
@@ -37,7 +37,7 @@ class DataValiadtion:
             dtype_mapping = {
                 "int": ["int64", "Int64"],
                 "float": ["float64", "Float64"],
-                "object": ["object", "string"]
+                "object": ["object", "string"],
             }
 
             mismatches = []
@@ -48,7 +48,7 @@ class DataValiadtion:
 
             validation_status = len(mismatches) == 0
 
-            with open(self.config.STATUS_FILE, 'a') as f:
+            with open(self.config.STATUS_FILE, "a") as f:
                 f.write(f"Data Type validation status: {validation_status}\n")
                 if mismatches:
                     f.write(f"Type mismatches: {mismatches}\n")
