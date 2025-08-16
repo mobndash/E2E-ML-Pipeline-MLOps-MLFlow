@@ -6,7 +6,7 @@ seaborn
 scikit-learn
 dill
 flask
-mlflow
+mlflow==2.2.2
 python-box # To handle exceptions
 pyYAML
 tqdm
@@ -14,4 +14,6 @@ ensure
 joblib
 types-pyYAML
 fastAPI
+utils
+setuptools==65.5.0
 -e .

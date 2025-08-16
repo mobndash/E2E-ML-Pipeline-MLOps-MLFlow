@@ -40,3 +40,8 @@
 
 14) Update everything as per he workflow in step 5 i.e config_entity, configuration.py, data_transformation.py under components, stage_data_transformation.py under pipeline, 
                 main.py
+
+15) Similarly, follow step 5) for model_trainer.ipynb
+
+16) Same for model_evaluation.ipynb
+

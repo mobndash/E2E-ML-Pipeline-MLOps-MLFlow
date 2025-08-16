@@ -5,6 +5,7 @@ from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import DataIngestionConfi
 from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import DataValidationConfig
 from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import DataTransformationConfig
 from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import ModelTrainerConfig
+from src.ML_MLOps_MLFlow_Pipeline.entity.config_entity import ModelEvaluationConfig
 
 
 class ConfigurationManager:
@@ -79,3 +80,23 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        params = self.params.ElasticNet
+        schema = self.schema.TARGET_COLUMN
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_data_path=config.test_data_path,
+            model_path=config.model_path,
+            all_params=params,
+            metric_file_name=config.metric_file_name,
+            # mlflow_uri="https://dagshub.com/mobndash/E2E-ML-Pipeline-MLOps-MLFlow.mlflow",
+            mlflow_uri="file:///E:/ProjectPractice/mlruns",
+            target_column=schema.name,
+        )
+
+        return model_evaluation_config
