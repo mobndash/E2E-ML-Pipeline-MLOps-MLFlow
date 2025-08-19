@@ -1,4 +1,4 @@
-## E2E-ML-Pipeline-MLOps-MLFlow
+## 🧠 E2E-ML-Pipeline-MLOps-MLFlow
 
 This is an End to End ML project right from Data Ingestion and Deployment.
 This project predicts Wine Quality, but has more emphasis on How the project is developed, How is the data ingested, data transformationdone, model trained, ML-Ops, ML-Flow and deployment via GitHub Actions.
@@ -17,7 +17,7 @@ Github Actions -
    GitHub’s built-in automation system. It lets you run workflows (scripts) automatically when something happens in your repo — like pushing code, creating a pull request, or even on a schedule.
    To facilitate CI-CD
 
-## Project Structure
+## 📁 Project Structure
 ```
 E2E-ML-Pipeline-MLOps-MLFlow
 ├─ app.py
@@ -70,10 +70,10 @@ E2E-ML-Pipeline-MLOps-MLFlow
 - ML Experiments : DagsHub
 - Integration : Project + GitHub + DagsHub + AWS + GitHub Actions + MLOps
 
-## Project endpoints
+## 📡 Project endpoints
    `http://3.26.182.93:8080/`
 
-## Key Observations
+## 📁 Key Observations
 
 ElasticNet - is Elastic Net is a linear regression model with regularization, combining:
       L1 (Lasso) → encourages sparsity (some coefficients become exactly 0).
@@ -91,8 +91,9 @@ Model Observations  -
       l1_ratio = 1 → Pure Lasso (L1)
          Encourages sparsity → some coefficients exactly zero.
 
-## Screenshot 
+## 🖼️ Screenshot 
 ![App Preview](quality.png)
 ![CI/CD Pipeline](cicd.png)
+![MLFlow](ml.png)
 
 
