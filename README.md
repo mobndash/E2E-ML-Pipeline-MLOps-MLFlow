@@ -92,7 +92,7 @@ Model Observations  -
          Encourages sparsity → some coefficients exactly zero.
 
 ## Screenshot 
-![App Preview](images/quality.png)
-![CI/CD Pipeline](images/cicd.png)
+![App Preview](quality.png)
+![CI/CD Pipeline](cicd.png)
 
 
